@@ -3,6 +3,8 @@ services:
     build: .
     volumes:
       - "nextcloud_aio_nextcloud_data:/usr/src/app/data"
+    environment:
+      - version: "v1.01"
 volumes:
   nextcloud_aio_nextcloud_data:
     external: true
