@@ -1,0 +1,10 @@
+services:
+  create_link_files:
+    build: .
+    volumes:
+      - "nextcloud_aio_nextcloud_data:/usr/src/app/data"
+volumes:
+  nextcloud_aio_nextcloud_data:
+    external: true
+
+#RUN --mount=type=volume,source=nextcloud_aio_nextcloud_data,target=/usr/src/app/data,rw
