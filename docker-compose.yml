@@ -8,5 +8,3 @@ services:
 volumes:
   nextcloud_aio_nextcloud_data:
     external: true
-
-#RUN --mount=type=volume,source=nextcloud_aio_nextcloud_data,target=/usr/src/app/data,rw
