@@ -1,14 +1,14 @@
 services:
   create_link_files:
-#    image: chr1sn0/create_link_files
-    build: .
+    image: chr1sn0/create_link_files
+#    build: .
     volumes:
-      - "/run/media/chr1sn0/Daten/Nextcloud/000-truddis-art/020-Photos/Articles/:/usr/src/app/data"
-#      - "nextcloud_aio_nextcloud_data:/usr/src/app/data"
+#      - "/run/media/chr1sn0/Daten/Nextcloud/000-truddis-art/020-Photos/Articles/:/usr/src/app/data"
+      - "nextcloud_aio_nextcloud_data:/usr/src/app/data"
     environment:
       VERSION: v1.02
-      PATH_IN_DATA_TO_SEARCHFOLDER: .
-#      PATH_IN_DATA_TO_SEARCHFOLDER: ./data/__groupfolders/1/
+#      PATH_IN_DATA_TO_SEARCHFOLDER: .
+      PATH_IN_DATA_TO_SEARCHFOLDER: ./data/__groupfolders/1/
 volumes:
   nextcloud_aio_nextcloud_data:
     external: true
