@@ -1,6 +1,6 @@
 services:
   create_link_files:
-    build: .
+    image: chr1sn0/create_link_files
     volumes:
       - "nextcloud_aio_nextcloud_data:/usr/src/app/data"
     environment:
